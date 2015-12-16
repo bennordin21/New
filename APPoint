@@ -1,0 +1,56 @@
+public class APPoint 
+{ 
+    private double myX; 
+    private double myY; 
+
+    public APPoint( double x, double y ) 
+    { 
+        myX = x; 
+        myY = y; 
+    } 
+
+    public double getX()
+    {
+        return myX;
+    }
+    
+    public double getY()
+    {
+        return myY;
+    }
+
+    /**
+     * STATIC version of PRINT
+     */
+    public static String STATICPrintAPPoint( APPoint p )
+    {
+        return "(" + p.getX() + "," + p.getY() + ")";
+    }
+    
+    /**
+     * NON-STATIC version of PRINT
+     */
+    public String NONSTATICPrintAPPoint()
+    {
+        return "(" + myX + "," + myY + ")";
+    }
+    
+    
+    
+    
+    public static void main(String[] args)
+    {
+        APPoint a = new APPoint(3.2, -4.5);
+        
+        System.out.println("Non-statically, using DOT notation. \t a.NONSTATICPrintAPPoint()");
+        System.out.println( a.NONSTATICPrintAPPoint() );
+        
+        System.out.println("Statically, using Parameters. \t a.NONSTATICPrintAPPoint()");
+        System.out.println( STATICPrintAPPoint(a) );
+    }
+    
+
+    
+
+    
+}
